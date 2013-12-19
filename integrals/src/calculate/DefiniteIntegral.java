@@ -7,11 +7,11 @@ public class DefiniteIntegral implements IntegrationFunction {
 	private IntegrationFunction	integrand;
 	private Variable variable;
 	
-	public DefiniteIntegral(IntegrationFunction integrand, double upperLimit, double lowerLimit, Variable var) {
+	public DefiniteIntegral(Integral integrand, double upperLimit, double lowerLimit, Variable var) {
 		super();
 		this.upperLimit = upperLimit;
 		this.lowerLimit = lowerLimit;
-		this.integrand = integrand;
+		this.integrand = (IntegrationFunction) integrand;
 		this.variable = var;
 	}
 

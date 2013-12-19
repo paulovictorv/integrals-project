@@ -1,6 +1,8 @@
 package calculate;
 
 import org.junit.Test;
+
+import expression.InvalidIntegralException;
 import static org.junit.Assert.*;
 
 public class IntegralTest {
@@ -43,7 +45,7 @@ public class IntegralTest {
 	}
 	
 	@Test
-	public void testTripleIntegralSimple(){
+	public void testTripleIntegralSimple() throws InvalidIntegralException{
 		final IntegrationFunction integrand = new IntegrationFunction() {
 			@Override
 			public double evaluate(double... args) {
